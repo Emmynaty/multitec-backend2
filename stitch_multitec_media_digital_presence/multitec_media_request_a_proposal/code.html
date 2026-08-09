@@ -1,0 +1,376 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Request a Proposal | Multitec Media</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 2px rgba(11, 45, 77, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#313030",
+                        "primary-fixed": "#d2e4ff",
+                        "secondary": "#b6250f",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-container": "#f0eded",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad3",
+                        "on-background": "#1c1b1b",
+                        "tertiary": "#14181a",
+                        "secondary-fixed-dim": "#ffb4a6",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7995bb",
+                        "on-secondary-fixed-variant": "#8f1000",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#446083",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-container": "#fd583c",
+                        "outline": "#73777f",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-container": "#292c2f",
+                        "primary-container": "#0b2d4d",
+                        "primary-fixed-dim": "#acc9f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2b486a",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed": "#e0e3e6",
+                        "on-tertiary-container": "#909396",
+                        "on-secondary-fixed": "#3f0300",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#acc9f0",
+                        "on-surface-variant": "#43474e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#590600",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "background": "#fcf9f8",
+                        "primary": "#001830",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "outline-variant": "#c3c6cf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-primary border-b border-outline-variant dark:border-outline sticky top-0 z-50 w-full">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="/" class="flex items-center gap-4 hover:opacity-90">
+<img alt="Multitec Media Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">Multitec Media</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/map">Billboard Network</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/gallery">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/about">About</a>
+<a class="font-body-md text-body-md text-secondary-container dark:text-secondary-fixed border-b-2 border-secondary-container pb-1" href="/proposal">Contact</a>
+<a href="/proposal" class="bg-primary-container text-on-primary text-label-sm font-label-sm px-6 py-2 rounded-lg hover:shadow-lg transition-all active:scale-95 duration-100 ease-in-out text-center">
+                    Request a Proposal
+</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="pt-16 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-primary mb-4 leading-tight">Scale Your Revenue with Data-Driven Growth</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Complete the form below to receive a custom performance roadmap. We specialize in ROI-focused social advertising and high-impact billboard campaigns.</p>
+</section>
+<!-- Main Form & Info Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Contact Information & Trust -->
+<div class="lg:col-span-5 space-y-10">
+<div class="bg-white border border-outline-variant p-8 rounded-xl shadow-[0px_4px_20px_rgba(11,45,77,0.05)]">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Direct Contact</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-secondary-fixed-dim/20 p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Account Manager</p>
+<p class="font-body-lg text-body-lg font-semibold text-primary">Emmanuel</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-secondary-fixed-dim/20 p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Phone</p>
+<p class="font-body-lg text-body-lg font-semibold text-primary">09034348640</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-secondary-fixed-dim/20 p-3 rounded-lg text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Email</p>
+<p class="font-body-lg text-body-lg font-semibold text-primary">multitecmedia@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container text-white p-8 rounded-xl relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">timer</span>
+<h3 class="font-headline-md text-headline-md mb-2">Our Promise</h3>
+<p class="font-body-md text-body-md opacity-90">"We respect your time and business goals. We'll get back to you within 24 hours with a preliminary analysis of your market position."</p>
+</div>
+<div class="absolute -bottom-8 -right-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">rocket_launch</span>
+</div>
+</div>
+</div>
+<!-- Right: The Proposal Form -->
+<div class="lg:col-span-7">
+<form id="proposal-form" class="bg-white border border-outline-variant p-8 md:p-12 rounded-xl shadow-[0px_4px_20px_rgba(11,45,77,0.05)] space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Business Name</label>
+<input name="businessName" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary-container transition-all" placeholder="Multitec Media" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Contact Person</label>
+<input name="contactPerson" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary-container transition-all" placeholder="John Doe" required="" type="text">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Campaign Goal</label>
+<textarea name="goal" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary-container transition-all" placeholder="e.g. Increase online sales by 20% or brand awareness for a new branch" required="" rows="3"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Monthly Budget Range</label>
+<select name="budget" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary-container transition-all">
+<option>$500 - $2,000</option>
+<option>$2,000 - $5,000</option>
+<option>$5,000 - $10,000</option>
+<option>$10,000+</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Expected Timeline</label>
+<select name="timeline" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary-container transition-all">
+<option>Immediate Launch</option>
+<option>Within 1 Month</option>
+<option>1 - 3 Months</option>
+<option>Planning phase</option>
+</select>
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">Preferred Channels</label>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:bg-primary-container/5 has-[:checked]:border-primary-container">
+<input class="text-primary-container focus:ring-primary-container" name="channel" type="radio" value="Social ads">
+<span class="font-body-md">Social Ads</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:bg-primary-container/5 has-[:checked]:border-primary-container">
+<input class="text-primary-container focus:ring-primary-container" name="channel" type="radio" value="Billboards">
+<span class="font-body-md">Billboards</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:bg-primary-container/5 has-[:checked]:border-primary-container">
+<input checked="" class="text-primary-container focus:ring-primary-container" name="channel" type="radio" value="Both">
+<span class="font-body-md">Both</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:bg-primary-container/5 has-[:checked]:border-primary-container">
+<input class="text-primary-container focus:ring-primary-container" name="channel" type="radio" value="Marketing/Branding">
+<span class="font-body-md">Marketing/Branding</span>
+</label></div>
+</div>
+<button class="w-full bg-primary-container text-white font-headline-md text-headline-md py-4 rounded-lg hover:bg-primary transition-all flex items-center justify-center gap-2 group" type="submit">
+                            Request My Proposal
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-high py-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="space-y-4 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-primary">Ready to See Real Growth?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Join 50+ businesses that scaled their visibility and sales with Multitec Media's omnichannel approach.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-white p-6 rounded-xl border border-outline-variant text-center shadow-sm">
+<p class="text-secondary font-bold text-4xl">94%</p>
+<p class="text-label-sm text-on-surface-variant">ROI Increase</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant text-center shadow-sm">
+<p class="text-primary font-bold text-4xl">24h</p>
+<p class="text-label-sm text-on-surface-variant">Response Time</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-inverse-surface border-t border-primary dark:border-outline-variant">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-container-max mx-auto">
+<div class="space-y-6 max-w-sm">
+<div class="flex items-center gap-4">
+<img alt="Multitec Media Logo" class="h-8 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
+<span class="text-headline-md font-headline-md font-bold text-white">Multitec Media</span>
+</div>
+<p class="font-body-md text-body-md text-white opacity-80">Empowering brands with precision-targeted social advertising and high-impact physical media across Nigeria.</p>
+<p class="font-label-sm text-label-sm text-white opacity-60">© 2024 Multitec Media. Your ROI, Our Promise.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Services</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">About</a></li>
+<li class=""><a class="font-body-md text-body-md text-secondary-fixed font-bold" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase tracking-widest">Direct Contact</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-body-md text-on-primary-container opacity-80">Emmanuel | 09034348640</li>
+<li class="font-body-md text-body-md text-on-primary-container opacity-80">multitecmedia@gmail.com</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Form micro-interaction: update visual state of channel radio buttons
+        const radios = document.querySelectorAll('input[name="channel"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                radios.forEach(r => {
+                    const parent = r.closest('label');
+                    if (r.checked) {
+                        parent.classList.add('ring-2', 'ring-primary-container');
+                    } else {
+                        parent.classList.remove('ring-2', 'ring-primary-container');
+                    }
+                });
+            });
+        });
+
+        // Form submission via AJAX API
+        const form = document.getElementById('proposal-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            const originalBtnContent = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            const formData = {
+                businessName: form.querySelector('[name="businessName"]').value,
+                contactPerson: form.querySelector('[name="contactPerson"]').value,
+                goal: form.querySelector('[name="goal"]').value,
+                budget: form.querySelector('[name="budget"]').value,
+                timeline: form.querySelector('[name="timeline"]').value,
+                channel: form.querySelector('[name="channel"]:checked')?.value || 'Both'
+            };
+            
+            try {
+                const response = await fetch('/api/proposal', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    btn.innerHTML = 'Proposal Sent Successfully!';
+                    btn.classList.remove('bg-primary-container');
+                    btn.classList.add('bg-green-600');
+                    form.reset();
+                    
+                    // Reset button state after a few seconds
+                    setTimeout(() => {
+                        btn.innerHTML = originalBtnContent;
+                        btn.classList.remove('bg-green-600');
+                        btn.classList.add('bg-primary-container');
+                        btn.disabled = false;
+                    }, 4000);
+                } else {
+                    throw new Error('Server returned an error');
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = 'Error Sending Proposal';
+                btn.classList.remove('bg-primary-container');
+                btn.classList.add('bg-red-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalBtnContent;
+                    btn.classList.remove('bg-red-600');
+                    btn.classList.add('bg-primary-container');
+                    btn.disabled = false;
+                }, 4000);
+            }
+        });
+    </script>
+
+
+
+
+</body></html>

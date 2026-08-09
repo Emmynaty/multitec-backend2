@@ -1,0 +1,80 @@
+[
+  {
+    "id": "eleyele-dugbe",
+    "name": "Eleyele Junction Area, Dugbe",
+    "type": "Unipole / Eyecatcher",
+    "size": "35m x 5m",
+    "status": "Available",
+    "impressions": "220k / day",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBc_O3oDS5F9JFsGW98pUS5EQVDblz7E1Gfh_LZpRLJLuKghP74ZlUQ5Uc28TPILgvt54lVjKF_civr-uNNW55VuLqRl6snYcRYpX0ni0QNE9yd9_CEMuOg0F7zwEUcEWttuQ2ff8Xywtjg7nVmbm9fyRzNsqEUh12rljcMhKW6UL35nU0C6__tieel1VNTGMkO5GjOJStdCuv2vfNXMsragiHPKsZOZB75HHMwlvmk3do4KgFa24iqkXV2-2LElUiBqbYNzEZEh2oR",
+    "coordinates": {
+      "top": "65%",
+      "left": "15%"
+    }
+  },
+  {
+    "id": "ojuirin-bodija",
+    "name": "Oju Irin, Bodija",
+    "type": "Unipole",
+    "size": "18m x 6m",
+    "status": "Available",
+    "impressions": "180k / day",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAgdWrJRIt4Cx8a-BNRHlsrIbib2XKnqIq-s5LIv3Viv9yQLi5RCxABmuxw_W5QoBl3aXgLGmYkWBem9SRepKj8c-1gB2FOXouQRMkAPVmlV_k5-7HZ9dGmy-3VE2nF2r5axJwCFV5cdl-GAYljmnKBh1bW4t6huFXm4ec_0mrGOp7ULqwOrbkHeQWIfG_1eFl-Aef5jkcLlLOV85G-QcobgirLVJEonQdwDgWFHazE15GIGOEw7F_oFuoT7ZabFESF3lv5rToR6CqV",
+    "coordinates": {
+      "top": "35%",
+      "left": "55%"
+    }
+  },
+  {
+    "id": "mokola-roundabout",
+    "name": "Mokola Roundabout (Bridge Area)",
+    "type": "Landscape Gantry",
+    "size": "30ft x 10ft",
+    "status": "Booked",
+    "impressions": "310k / day",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCn0YC4mqpjTfsFGDMd3_mf4fX761JAJViMkZYCmKD13OEy3tOHOOhVq7LKvtYQYrZg1LEEs6uqYEYj2S6vYJx_a0zG5F8vjUICmd2CK4i9ncQNP9D27DgraAmsfcRnkEGr-ZfgoitizeXySBLYGDHPMNa8kw2AODy68l-ogUw-VtOYY_eU61BhMFyvZgWQLBHKvPv91Xj35-EDReIn9bu1mSOeAAzPewEILKaXzDoLJuAQBmodniP4L_9VCK8lIBXGg1_bqGwSxbK_",
+    "coordinates": {
+      "top": "55%",
+      "left": "40%"
+    }
+  },
+  {
+    "id": "iwo-road",
+    "name": "Iwo Road Interchange",
+    "type": "Portrait LED (Digital)",
+    "size": "40ft x 15ft",
+    "status": "Available",
+    "impressions": "450k / day",
+    "imageUrl": "https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=600&auto=format&fit=crop",
+    "coordinates": {
+      "top": "48%",
+      "left": "82%"
+    }
+  },
+  {
+    "id": "challenge-junction",
+    "name": "Challenge Junction, Ibadan",
+    "type": "Backlit Billboard",
+    "size": "24m x 4m",
+    "status": "Available",
+    "impressions": "290k / day",
+    "imageUrl": "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=600&auto=format&fit=crop",
+    "coordinates": {
+      "top": "78%",
+      "left": "45%"
+    }
+  },
+  {
+    "id": "secretariat-gate",
+    "name": "Secretariat Gate Road",
+    "type": "Double-Sided Portrait",
+    "size": "12m x 4m",
+    "status": "Booked",
+    "impressions": "140k / day",
+    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+    "coordinates": {
+      "top": "25%",
+      "left": "35%"
+    }
+  }
+]

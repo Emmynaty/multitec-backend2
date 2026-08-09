@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Multitec Media</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#001830",
+            "primary-container": "#0b2d4d",
+            secondary: "#b6250f",
+            "secondary-container": "#fd583c",
+            "surface-container": "#f0eded",
+            "on-surface": "#1c1b1b",
+            background: "#fcf9f8"
+          },
+          fontFamily: {
+            headline: ["Montserrat"],
+            body: ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .admin-card {
+      background: #ffffff;
+      box-shadow: 0px 4px 20px rgba(11, 45, 77, 0.05);
+      border: 1px solid #E1E4E8;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-primary text-white py-4 px-6 md:px-12 flex justify-between items-center shadow-md">
+    <div class="flex items-center gap-3">
+      <img alt="Multitec Media Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
+      <span class="text-xl font-headline font-bold">Multitec Media Admin</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="/" class="text-sm bg-primary-container hover:bg-opacity-95 text-white px-4 py-2 rounded-lg transition-all active:scale-95 flex items-center gap-2">
+        <span class="material-symbols-outlined text-sm">home</span> View Site
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6 md:p-12 max-w-7xl mx-auto w-full">
+    <div class="flex justify-between items-center mb-8">
+      <div>
+        <h1 class="text-3xl font-headline font-bold text-primary">Proposal Submissions</h1>
+        <p class="text-gray-500 mt-1">Manage and track inbound leads and project proposals.</p>
+      </div>
+      <button onclick="loadProposals()" class="p-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-all flex items-center gap-2 text-sm text-gray-700">
+        <span class="material-symbols-outlined">refresh</span> Refresh
+      </button>
+    </div>
+
+    <!-- Metrics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+      <div class="admin-card p-6 rounded-xl flex items-center gap-4">
+        <div class="p-3 rounded-lg bg-blue-100 text-blue-800">
+          <span class="material-symbols-outlined text-2xl">mail</span>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Total Inquiries</p>
+          <p id="metric-total" class="text-2xl font-bold text-primary">0</p>
+        </div>
+      </div>
+      <div class="admin-card p-6 rounded-xl flex items-center gap-4">
+        <div class="p-3 rounded-lg bg-orange-100 text-orange-800">
+          <span class="material-symbols-outlined text-2xl">fiber_new</span>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">New Leads</p>
+          <p id="metric-new" class="text-2xl font-bold text-primary">0</p>
+        </div>
+      </div>
+      <div class="admin-card p-6 rounded-xl flex items-center gap-4">
+        <div class="p-3 rounded-lg bg-green-100 text-green-800">
+          <span class="material-symbols-outlined text-2xl">check_circle</span>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Contacted</p>
+          <p id="metric-contacted" class="text-2xl font-bold text-primary">0</p>
+        </div>
+      </div>
+      <div class="admin-card p-6 rounded-xl flex items-center gap-4">
+        <div class="p-3 rounded-lg bg-purple-100 text-purple-800">
+          <span class="material-symbols-outlined text-2xl">payments</span>
+        </div>
+        <div>
+          <p class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Highest Budget</p>
+          <p id="metric-highest" class="text-2xl font-bold text-primary">$0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="admin-card rounded-xl overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-100 text-xs font-semibold text-gray-500 uppercase">
+              <th class="p-4 pl-6">Business Details</th>
+              <th class="p-4">Contact</th>
+              <th class="p-4">Channels</th>
+              <th class="p-4">Budget / Timeline</th>
+              <th class="p-4">Date</th>
+              <th class="p-4">Status</th>
+              <th class="p-4 pr-6 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="proposals-list" class="divide-y divide-gray-100 text-sm">
+            <tr>
+              <td colspan="7" class="p-8 text-center text-gray-400">Loading proposal submissions...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    async function loadProposals() {
+      try {
+        const response = await fetch('/api/proposals');
+        const proposals = await response.json();
+        renderProposals(proposals);
+      } catch (err) {
+        console.error('Error fetching proposals:', err);
+      }
+    }
+
+    function renderProposals(proposals) {
+      const tbody = document.getElementById('proposals-list');
+      
+      // Update Metrics
+      document.getElementById('metric-total').innerText = proposals.length;
+      document.getElementById('metric-new').innerText = proposals.filter(p => p.status === 'New').length;
+      document.getElementById('metric-contacted').innerText = proposals.filter(p => p.status === 'Contacted').length;
+
+      // Find highest budget
+      let highest = 0;
+      proposals.forEach(p => {
+        if (p.budget) {
+          const num = parseInt(p.budget.replace(/[^0-9]/g, ''));
+          if (num > highest) highest = num;
+        }
+      });
+      document.getElementById('metric-highest').innerText = highest > 0 ? `$${highest.toLocaleString()}+` : 'N/A';
+
+      if (proposals.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="p-8 text-center text-gray-400">No proposals submitted yet. Go submit one in the <a href="/proposal" class="text-secondary hover:underline">proposal form</a>!</td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = proposals.map(p => {
+        const dateStr = new Date(p.submittedAt).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        // Status Badge Style
+        let statusBadge = '';
+        if (p.status === 'New') {
+          statusBadge = '<span class="px-2 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-800">New</span>';
+        } else if (p.status === 'Contacted') {
+          statusBadge = '<span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Contacted</span>';
+        } else {
+          statusBadge = `<span class="px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-800">${p.status}</span>`;
+        }
+
+        return `
+          <tr class="hover:bg-gray-50/50">
+            <td class="p-4 pl-6">
+              <p class="font-bold text-gray-900">${escapeHtml(p.businessName)}</p>
+              <p class="text-xs text-gray-400 mt-1 max-w-xs truncate" title="${escapeHtml(p.goal)}">Goal: ${escapeHtml(p.goal)}</p>
+            </td>
+            <td class="p-4">
+              <p class="font-semibold text-gray-700">${escapeHtml(p.contactPerson)}</p>
+              <p class="text-xs text-gray-400 mt-0.5">${escapeHtml(p.email)} | ${escapeHtml(p.phone)}</p>
+            </td>
+            <td class="p-4">
+              <span class="px-2 py-1 text-xs font-medium rounded bg-blue-50 text-blue-700">${escapeHtml(p.channel)}</span>
+            </td>
+            <td class="p-4">
+              <p class="font-semibold text-gray-700">${escapeHtml(p.budget)}</p>
+              <p class="text-xs text-gray-400 mt-0.5">${escapeHtml(p.timeline)}</p>
+            </td>
+            <td class="p-4 text-xs text-gray-500">${dateStr}</td>
+            <td class="p-4">${statusBadge}</td>
+            <td class="p-4 pr-6 text-right">
+              <select onchange="updateStatus('${p.id}', this.value)" class="text-xs bg-white border border-gray-300 rounded px-2 py-1 focus:ring-1 focus:ring-primary focus:outline-none">
+                <option value="New" ${p.status === 'New' ? 'selected' : ''}>New</option>
+                <option value="Contacted" ${p.status === 'Contacted' ? 'selected' : ''}>Contacted</option>
+                <option value="Closed" ${p.status === 'Closed' ? 'selected' : ''}>Closed</option>
+              </select>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    async function updateStatus(id, newStatus) {
+      try {
+        const response = await fetch(`/api/proposals/${id}/status`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (response.ok) {
+          loadProposals();
+        }
+      } catch (err) {
+        console.error('Error updating status:', err);
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+    }
+
+    // Load on page load
+    loadProposals();
+  </script>
+</body>
+</html>

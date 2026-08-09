@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1786300195767",
+    "businessName": "Test Business",
+    "contactPerson": "John Admin",
+    "email": "N/A",
+    "phone": "N/A",
+    "goal": "Increase brand awareness in Mokola",
+    "budget": ",000 - ,000",
+    "timeline": "Immediate Launch",
+    "channel": "Both",
+    "submittedAt": "2026-08-09T18:29:55.767Z",
+    "status": "New"
+  },
+  {
+    "id": "1786300991573",
+    "businessName": "multitec media",
+    "contactPerson": "Emmanuel ",
+    "email": "N/A",
+    "phone": "N/A",
+    "goal": "I want to use you as a case study ",
+    "budget": "$500 - $2,000",
+    "timeline": "Within 1 Month",
+    "channel": "Social ads",
+    "submittedAt": "2026-08-09T18:43:11.573Z",
+    "status": "New"
+  }
+]

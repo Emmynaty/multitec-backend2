@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Multitec Media | Your ROI, Our Promise</title>
+    
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/history@5/umd/history.development.js"></script>
+    <script src="https://unpkg.com/react-router@6.3.0/umd/react-router.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6.3.0/umd/react-router-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b2d4d;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 24, 48, 0.85), rgba(0, 24, 48, 0.95)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .flat-card {
+            background: #ffffff;
+            box-shadow: 0px 4px 20px rgba(11, 45, 77, 0.05);
+            border: 1px solid #E1E4E8;
+            transition: all 0.3s ease;
+        }
+        .flat-card:hover {
+            box-shadow: 0px 8px 30px rgba(11, 45, 77, 0.1);
+        }
+        .bento-item {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-8px);
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-surface": "#313030",
+                        "primary-fixed": "#d2e4ff",
+                        "secondary": "#b6250f",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-container": "#f0eded",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdad3",
+                        "on-background": "#1c1b1b",
+                        "tertiary": "#14181a",
+                        "secondary-fixed-dim": "#ffb4a6",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7995bb",
+                        "on-secondary-fixed-variant": "#8f1000",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#446083",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-container": "#fd583c",
+                        "outline": "#73777f",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-container": "#292c2f",
+                        "primary-container": "#0b2d4d",
+                        "primary-fixed-dim": "#acc9f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2b486a",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed": "#e0e3e6",
+                        "on-tertiary-container": "#909396",
+                        "on-secondary-fixed": "#3f0300",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#acc9f0",
+                        "on-surface-variant": "#43474e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#590600",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "background": "#fcf9f8",
+                        "primary": "#001830",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "outline-variant": "#c3c6cf"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Montserrat"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        const { createRoot } = ReactDOM;
+        const { MemoryRouter, Routes, Route, Link, useNavigate, useLocation } = ReactRouterDOM;
+
+        // --- Common Components ---
+
+        const Navbar = () => {
+            const navigate = useNavigate();
+            const { pathname } = useLocation();
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+            const navLinks = [
+                { name: 'Services', path: '/services' },
+                { name: 'Billboard Network', path: '/billboard-network' },
+                { name: 'About', path: '/about' },
+                { name: 'Contact', path: '/proposal' },
+            ];
+
+            return (
+                <header className="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+                    <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+                        <Link to="/" className="flex items-center gap-3">
+                            <img alt="Multitec Media Logo" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4" />
+                            <span className="text-headline-md font-headline-md font-bold text-primary">Multitec Media</span>
+                        </Link>
+                        
+                        <div className="hidden md:flex items-center gap-8">
+                            {navLinks.map((link) => (
+                                <Link 
+                                    key={link.name} 
+                                    to={link.path}
+                                    className={`font-body-md text-body-md transition-colors ${pathname === link.path ? 'text-secondary-container border-b-2 border-secondary-container pb-1' : 'text-on-surface-variant hover:text-primary'}`}
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <button 
+                                onClick={() => navigate('/proposal')}
+                                className="bg-primary-container text-white px-6 py-2.5 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95"
+                            >
+                                Request a Proposal
+                            </button>
+                        </div>
+
+                        <button className="md:hidden text-primary" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                            <span className="material-symbols-outlined">menu</span>
+                        </button>
+                    </nav>
+                    
+                    {/* Mobile Menu */}
+                    {isMenuOpen && (
+                        <div className="md:hidden bg-surface border-b border-outline-variant p-4 space-y-4">
+                            {navLinks.map((link) => (
+                                <Link 
+                                    key={link.name} 
+                                    to={link.path} 
+                                    className="block font-body-md text-on-surface-variant"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <button 
+                                onClick={() => { navigate('/proposal'); setIsMenuOpen(false); }}
+                                className="w-full bg-primary-container text-white px-6 py-2.5 rounded-lg font-label-sm"
+                            >
+                                Request a Proposal
+                            </button>
+                        </div>
+                    )}
+                </header>
+            );
+        };
+
+        const Footer = () => (
+            <footer className="bg-primary-container border-t border-primary w-full">
+                <div className="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-container-max mx-auto">
+                    <div className="space-y-6 max-w-sm">
+                        <div className="flex items-center gap-3">
+                            <img alt="Multitec Media Logo" className="h-8 w-8 filter brightness-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4" />
+                            <span className="text-headline-md font-headline-md font-bold text-on-primary-container">Multitec Media</span>
+                        </div>
+                        <p className="font-body-md text-body-md text-on-primary-container opacity-80">© 2024 Multitec Media. Your ROI, Our Promise.</p>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+                        <div className="space-y-4">
+                            <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Company</h4>
+                            <ul className="space-y-2">
+                                <li><Link className="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" to="/services">Services</Link></li>
+                                <li><Link className="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" to="/about">About</Link></li>
+                                <li><Link className="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" to="/proposal">Contact</Link></li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Contact</h4>
+                            <ul className="space-y-2">
+                                <li className="text-on-primary-container opacity-80 font-body-md text-body-md">Emmanuel | 09034348640</li>
+                                <li className="text-on-primary-container opacity-80 font-body-md text-body-md">multitecmedia@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div className="space-y-4">
+                            <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Follow Us</h4>
+                            <div className="flex gap-4">
+                                <a className="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#">
+                                    <span className="material-symbols-outlined">social_leaderboard</span>
+                                </a>
+                                <a className="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#">
+                                    <span className="material-symbols-outlined">photo_camera</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        );
+
+        // --- Screens ---
+
+        const HomeScreen = () => {
+            const navigate = useNavigate();
+            return (
+                <main>
+                    {/* Hero */}
+                    <section className="hero-gradient min-h-[819px] flex items-center relative overflow-hidden">
+                        <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid md:grid-cols-2 gap-gutter items-center py-20">
+                            <div className="text-white space-y-6">
+                                <h1 className="font-headline-xl text-headline-xl leading-tight">Your Ads. Our Expertise. <span className="text-secondary-container">Real Results.</span></h1>
+                                <p className="font-body-lg text-body-lg text-white/80 max-w-lg">We run your campaigns so you don't have to. Data-driven strategy. Measurable ROI.</p>
+                                <div className="flex flex-wrap gap-4 pt-4">
+                                    <button onClick={() => navigate('/proposal')} className="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 shadow-lg">
+                                        Request a Proposal
+                                    </button>
+                                    <button onClick={() => navigate('/services')} className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-white/10 transition-all">
+                                        View Our Services
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="hidden md:block relative">
+                                <div className="absolute -top-20 -right-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+                                <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                                            <span className="material-symbols-outlined text-white">trending_up</span>
+                                        </div>
+                                        <div>
+                                            <p className="text-label-sm font-bold opacity-60">AVERAGE ROI</p>
+                                            <p className="text-headline-md font-bold text-white">+340% Growth</p>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-4">
+                                        <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-secondary-container w-[85%]"></div>
+                                        </div>
+                                        <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-secondary-container w-[70%]"></div>
+                                        </div>
+                                        <p className="text-body-md text-white/60">Campaign Performance tracking live.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* How It Works */}
+                    <section className="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Our Streamlined Process</h2>
+                            <div className="w-20 h-1.5 bg-secondary-container mx-auto rounded-full"></div>
+                        </div>
+                        <div className="grid md:grid-cols-4 gap-gutter">
+                            {[
+                                { step: '1. The Brief', icon: 'chat_bubble', text: 'You tell us your goals and what defines success for your brand.' },
+                                { step: '2. The Research', icon: 'analytics', text: 'We research your market & data to find untapped opportunities.' },
+                                { step: '3. The Execution', icon: 'ads_click', text: 'We build and run your campaign across optimized channels.' },
+                                { step: '4. The Leads', icon: 'person_add', text: 'You get qualified leads delivered straight to your funnel.' }
+                            ].map((item, idx) => (
+                                <div key={idx} className="text-center group">
+                                    <div className="w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white transition-all duration-300">
+                                        <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+                                    </div>
+                                    <h3 className="font-headline-md text-headline-md mb-2">{item.step}</h3>
+                                    <p className="text-on-surface-variant">{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Engagement Options Form Card */}
+                    <section className="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div className="bg-primary-container rounded-3xl p-12 relative overflow-hidden">
+                            <div className="absolute -bottom-10 -right-10 w-96 h-96 bg-secondary-container/10 rounded-full blur-3xl"></div>
+                            <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                                <div>
+                                    <h2 className="font-headline-lg text-headline-lg text-white mb-6">Flexible Engagement Models</h2>
+                                    <p className="text-body-lg text-white/80 mb-8 italic">"After 3 months, if results aren't there, you walk. That's our confidence."</p>
+                                    <div className="space-y-6">
+                                        <div className="flex gap-4">
+                                            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                                <span className="material-symbols-outlined text-white">work_history</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-bold text-headline-md">Project-Based</h4>
+                                                <p className="text-white/60">Perfect for one-off product launches or seasonal promotions.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-4">
+                                            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                                <span className="material-symbols-outlined text-white">subscriptions</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-bold text-headline-md">Subscription-Based</h4>
+                                                <p className="text-white/60">Monthly growth partnership with ongoing optimization and scaling.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="bg-white rounded-2xl p-8 shadow-2xl">
+                                    <h3 className="text-primary font-headline-md mb-4 text-center">Quick Connect</h3>
+                                    <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); navigate('/proposal'); }}>
+                                        <input className="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Your Name" type="text" />
+                                        <input className="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Business Email" type="email" />
+                                        <button className="w-full bg-secondary-container text-white font-bold py-4 rounded-lg shadow-lg hover:bg-secondary transition-all">Submit Interest</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const ProposalScreen = () => {
+            const [submitted, setSubmitted] = useState(false);
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                setSubmitted(true);
+            };
+
+            return (
+                <main className="min-h-screen">
+                    <section className="pt-16 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+                        <h1 className="font-headline-xl text-headline-xl text-primary mb-4 leading-tight">Scale Your Revenue with Data-Driven Growth</h1>
+                        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Complete the form below to receive a custom performance roadmap.</p>
+                    </section>
+
+                    <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-24">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                            <div className="lg:col-span-5 space-y-10">
+                                <div className="bg-white border border-outline-variant p-8 rounded-xl shadow-[0px_4px_20px_rgba(11,45,77,0.05)]">
+                                    <h2 className="font-headline-md text-headline-md text-primary mb-6">Direct Contact</h2>
+                                    <div className="space-y-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="bg-secondary-fixed-dim/20 p-3 rounded-lg text-secondary">
+                                                <span className="material-symbols-outlined">person</span>
+                                            </div>
+                                            <div>
+                                                <p className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Account Manager</p>
+                                                <p className="font-body-lg text-body-lg font-semibold text-primary">Emmanuel</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="bg-secondary-fixed-dim/20 p-3 rounded-lg text-secondary">
+                                                <span className="material-symbols-outlined">call</span>
+                                            </div>
+                                            <div>
+                                                <p className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Phone</p>
+                                                <p className="font-body-lg text-body-lg font-semibold text-primary">09034348640</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="bg-primary-container text-white p-8 rounded-xl relative overflow-hidden">
+                                    <div className="relative z-10">
+                                        <span className="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4">timer</span>
+                                        <h3 className="font-headline-md text-headline-md mb-2">Our Promise</h3>
+                                        <p className="font-body-md text-body-md opacity-90">"We respond to every proposal request within 24 hours with a preliminary analysis."</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="lg:col-span-7">
+                                {!submitted ? (
+                                    <form onSubmit={handleSubmit} className="bg-white border border-outline-variant p-8 md:p-12 rounded-xl shadow-[0px_4px_20px_rgba(11,45,77,0.05)] space-y-8">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div className="space-y-2">
+                                                <label className="font-label-sm text-label-sm text-on-surface-variant">Business Name</label>
+                                                <input className="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container outline-none" placeholder="Acme Corp" required type="text" />
+                                            </div>
+                                            <div className="space-y-2">
+                                                <label className="font-label-sm text-label-sm text-on-surface-variant">Contact Person</label>
+                                                <input className="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container outline-none" placeholder="John Doe" required type="text" />
+                                            </div>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="font-label-sm text-label-sm text-on-surface-variant">Campaign Goal</label>
+                                            <textarea className="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:border-primary-container outline-none" placeholder="Describe your goal..." rows="3"></textarea>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <label className="font-label-sm text-label-sm text-on-surface-variant block">Preferred Channels</label>
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                {['Social Ads', 'Billboards', 'Both', 'Others'].map(channel => (
+                                                    <label key={channel} className="flex items-center gap-3 p-4 border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low">
+                                                        <input type="radio" name="channel" value={channel} className="text-primary-container" />
+                                                        <span className="font-body-md">{channel}</span>
+                                                    </label>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <button type="submit" className="w-full bg-primary-container text-white font-headline-md text-headline-md py-4 rounded-lg hover:bg-primary transition-all flex items-center justify-center gap-2 group">
+                                            Request My Proposal
+                                            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                        </button>
+                                    </form>
+                                ) : (
+                                    <div className="bg-white border border-outline-variant p-12 rounded-xl text-center shadow-xl">
+                                        <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <span className="material-symbols-outlined text-4xl">check</span>
+                                        </div>
+                                        <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Request Sent!</h2>
+                                        <p className="text-on-surface-variant mb-8">Thank you. Emmanuel will get back to you within 24 hours.</p>
+                                        <button onClick={() => setSubmitted(false)} className="text-primary font-semibold underline">Send another request</button>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const AboutScreen = () => (
+            <main className="hero-gradient overflow-hidden">
+                <section className="px-margin-mobile md:px-margin-desktop py-20 md:py-32 max-w-container-max mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <span className="inline-block px-4 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-sm text-label-sm mb-6 uppercase tracking-widest">Our Story</span>
+                            <h1 className="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">Built from the inside out to drive <span className="text-secondary-container">real growth.</span></h1>
+                            <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                                After 6+ years running ads inside agencies, I saw a gap... I built Multitec Media to be different—lean, data-driven, results-focused.
+                            </p>
+                        </div>
+                        <div className="order-1 lg:order-2 relative group">
+                            <div className="absolute -inset-4 bg-secondary-container/10 rounded-3xl blur-2xl"></div>
+                            <div className="relative bg-white p-4 rounded-3xl shadow-xl border border-outline-variant">
+                                <img alt="Emmanuel" className="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0ujq_b7Rro5hDBxKTbdtPjIBs0QAY6b7Hpxl0N8tJGbiD-CAtIeMAlZHA92ZJ827fOATtWIVmeaF3h7RWjaAU6OCqqgP8cMXh2sjVnmeC-56YZ9H_eKYiyLys2fLfcdGWV7HsNvt9mu-jNx2lNP-ZYbdhUXXaVAPz6QK8q9qy-dzABnQwd5mEVTMDLbQPkvG2dmeHIWg7CK7InFnRkyNhx05xfQnkMm-Y7RVi-wCq0n9dkrJ3MxjvlJKSuKMrh7s_i1COsKZUqTk_h8" />
+                                <div className="absolute bottom-10 left-10 right-10 bg-primary/90 backdrop-blur-md p-6 rounded-xl border border-white/20">
+                                    <h3 className="font-headline-md text-headline-md text-white mb-1">Emmanuel</h3>
+                                    <p className="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider">Founder & Lead Strategist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="bg-white py-24 border-y border-outline-variant">
+                    <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                        <div className="grid grid-cols-12 gap-6">
+                            <div className="col-span-12 md:col-span-7 bg-surface-container-low p-10 rounded-3xl border border-outline-variant">
+                                <span className="material-symbols-outlined text-4xl text-primary mb-6">insights</span>
+                                <h3 className="font-headline-md text-headline-md text-primary mb-4">Data-First DNA</h3>
+                                <p className="text-on-surface-variant">Every campaign we launch is rooted in rigorous data analysis. We don't guess; we calculate. By tracking every dollar from click to conversion, we eliminate waste.</p>
+                            </div>
+                            <div className="col-span-12 md:col-span-5 bg-primary-container p-10 rounded-3xl text-white">
+                                <span className="material-symbols-outlined text-4xl text-secondary-container mb-6">emergency_home</span>
+                                <h3 className="font-headline-md text-headline-md mb-4">No BS approach</h3>
+                                <p className="opacity-80">We value transparency above all else. If a strategy isn't working, we'll tell you. Our reports are straightforward and focused on ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        );
+
+        const ServicesScreen = () => {
+            const navigate = useNavigate();
+            return (
+                <main>
+                    <section className="py-20 bg-surface-container-low border-b border-outline-variant text-center">
+                        <div className="max-w-container-max mx-auto px-margin-mobile">
+                            <h1 className="font-headline-xl text-headline-xl text-primary mb-6">Our Services & Solutions</h1>
+                            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">We combine precision digital targeting with high-impact outdoor advertising.</p>
+                        </div>
+                    </section>
+
+                    <section className="py-24 bg-white">
+                        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                            <div className="grid md:grid-cols-2 gap-16 items-center">
+                                <div>
+                                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full mb-6">
+                                        <span className="material-symbols-outlined text-[18px]">ads_click</span>
+                                        <span className="font-label-sm text-label-sm">High-Conversion Digital</span>
+                                    </span>
+                                    <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Social Media Ad Management</h2>
+                                    <p className="font-body-md text-body-md text-on-surface-variant mb-8">We manage your entire creative ecosystem—from scroll-stopping visuals to high-intent copy.</p>
+                                    <div className="p-6 bg-surface-container-lowest border border-outline-variant rounded-xl mb-8">
+                                        <p className="font-headline-md text-headline-md text-primary">10+ Leads in 6 Weeks</p>
+                                        <p className="text-on-surface-variant">Our performance benchmark for new campaigns.</p>
+                                    </div>
+                                    <button onClick={() => navigate('/proposal')} className="bg-primary text-white px-8 py-3 rounded-lg font-label-sm">Start Digital Campaign</button>
+                                </div>
+                                <div className="relative">
+                                    <img className="w-full aspect-square object-cover rounded-3xl grayscale hover:grayscale-0 transition-all duration-700 shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKksX6E6F3IvMoaikcEyg_piycvGfCUso8nP5sgAP7jXs-niyJhOjyYKL4FQTL5-65Nseu-xKyyAWqIHaduyyHjsFjQOXXRtOPFZkTONyCBqee5SUOI7UfvZSbUQzfzHvAiknH9fZFyMJWLBXiGw_QxeLLlPeaZTLqyE9pPz2YD11f5OXlcd6t2YEfH_icy3ssatteR4DIkA0aeaVMpVrkJDNeExpn4mgnpdxrkxYiB2VHRoAktYkEbnSXDO9cC9ZM5U8wQBR6XsDO" />
+                                    <div className="absolute -bottom-6 -left-6 bg-primary-container text-white p-6 rounded-2xl border-4 border-white">
+                                        <p className="text-secondary-container font-headline-lg">+240%</p>
+                                        <p className="text-label-sm">Engagement Growth</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const BillboardScreen = () => {
+            const locations = [
+                { name: 'Secretarial Gate', type: 'Landscape', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD8SFDw--s-SCj4uJDEsaOsdDZ64Chv0hKhTaN6smko2BeC-fweL-lqJMePWDtFIuhPel9qHgrw072zL8312uXeiDb6cbuVXzE8c2p67LM6h3zSKXDrsNRmf9cC76hRxzhvFHqNzorClrImKCWPpchQ7K_KqDXuc6N0nBxfBIHXlCB1WKAVlnv2Lu1x1Uo3YFKXbtB55RqFZD0bJslFltUU9Mrmy9P_9jSIRoyCczjMBcI4UgtA3gwrmbMlu0qZH4N1RUFY1566sUtT' },
+                { name: 'Ring Road - Palms Mall', type: 'Gantry', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-pROxjaIf3pB9y_C_YKe8DkK2tihljdS02OYfCayPdHqlOQxXIy2RkthrTeTqSKdPPIXqL6IlsD_1oShMEn86PsEw2kVsH4ZYiw8cI-J6LKIPiBANVVUikYU2_jaEe5L1hMYW-cAiXBUXBY9PrPh46_-YE8cXb1yd7zha7Qang_gRZrc1dDPA7A1OML7Z4il5aQY2gJsOEQ-Piye3pWjx6q_tO0RzK8oPUxSIDVrfHrMa7LZQXBWDIvuCPl-VPwfor1EOhi4qjh1c' },
+                { name: 'Bodija Market', type: 'Unipole', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBeMcpJnhXzHmB1jxlQ48fYjUCaiy7yLT0SUJU-XxwkKGJCY0ACTIqblIsvRca-WsG95EB5YqvjwzW5GI05bvl3AH5nfuk3JUsBRc7zbPj5uIcbN7laIsus6-2LiGkFCN7RGM3xo1s_U5HOyDGYsbKI2xFe2pV2-Wi0EzeGhgffCBN2E8JhUv6yfRYgeHQdVEUcRdcf9FzAVVkGEGQNPwldlJBZSuqyPfrwhdtqUz1Ly_CqUkD1hTmlPwopJ61AMLk5vCIhSOd0vp6z' },
+                { name: 'Iwo Road Interchange', type: 'Portrait', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPh4FBj8XpIpnb6cT7M3XLRQx0gxHUyw8o9jUaxUkBEe3OMjr6ZskoRIQ-baHfzlfw5Q2DgC1JX7j-OCYHbobZfu_NcIJ0bENa_LEljAmcTOwQkqLTNbGE26keTIDuRQg6gZbDGwBRZBsOhXB3ebquHuyyNuCr8uf5rvb8m3qNS2jwOoRPrGIYeN6gtMCSRbm8wlF1X4ICqKZlCcZ284PKv-ZMDqDPSi5xhKw0eqzqBEWaGkV9iOlf0rPQyqRNg_IYQ9CbsCeMEsjz' }
+            ];
+
+            return (
+                <main className="py-12 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                    <header className="mb-16">
+                        <span className="bg-secondary-container text-white px-4 py-1 rounded-full text-label-sm mb-6 inline-block">Network 2026</span>
+                        <h1 className="font-headline-xl text-headline-xl text-primary mb-6">BILLBOARD NETWORK 2026.</h1>
+                        <p className="text-on-surface-variant max-w-2xl text-body-lg">Explore premium placements across Ibadan's highest-traffic corridors.</p>
+                    </header>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                        {locations.map((loc, idx) => (
+                            <div key={idx} className="bento-item bg-white border border-outline-variant rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                                <div className="h-64 relative overflow-hidden group">
+                                    <img src={loc.img} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={loc.name} />
+                                    <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded text-[10px] font-bold uppercase">{loc.type}</div>
+                                </div>
+                                <div className="p-8">
+                                    <h3 className="font-headline-md text-headline-md text-primary mb-4">{loc.name}</h3>
+                                    <p className="text-on-surface-variant mb-6">Strategic position capturing high-volume traffic in key urban centers.</p>
+                                    <Link to="/proposal" className="text-secondary font-label-sm flex items-center gap-2 group">
+                                        Check Availability <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </main>
+            );
+        };
+
+        // --- App Wrapper ---
+
+        const App = () => {
+            const { pathname } = useLocation();
+
+            // Scroll to top on route change
+            useEffect(() => {
+                window.scrollTo(0, 0);
+            }, [pathname]);
+
+            return (
+                <div className="flex flex-col min-h-screen">
+                    <Navbar />
+                    <div className="flex-grow">
+                        <Routes>
+                            <Route path="/" element={<HomeScreen />} />
+                            <Route path="/proposal" element={<ProposalScreen />} />
+                            <Route path="/about" element={<AboutScreen />} />
+                            <Route path="/services" element={<ServicesScreen />} />
+                            <Route path="/billboard-network" element={<BillboardScreen />} />
+                        </Routes>
+                    </div>
+                    <Footer />
+                </div>
+            );
+        };
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(
+            <MemoryRouter>
+                <App />
+            </MemoryRouter>
+        );
+    </script>
+</body>
+</html>
