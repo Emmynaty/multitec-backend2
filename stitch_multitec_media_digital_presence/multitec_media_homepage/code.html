@@ -106,7 +106,6 @@
             background-size: cover;
             background-position: center;
         }
-        /* Subtle floating / fluid aesthetics — brand-safe */
         .flat-card {
             background: #ffffff;
             box-shadow: 0px 4px 20px rgba(11, 45, 77, 0.05);
@@ -156,7 +155,6 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- TopNavBar -->
 <header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full">
 <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <a href="/" class="flex items-center gap-3 hover:opacity-90">
@@ -166,33 +164,22 @@
 <div class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/services">Services</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/map">Billboard Network</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/gallery">Gallery</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/proposal">Contact</a>
-<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">
-                    Request a Proposal
-</a>
+<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Request a Proposal</a>
 </div>
-<!-- Mobile Menu Trigger -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
 </nav>
 </header>
 <main>
-<!-- Hero Section -->
-<section class="hero-gradient min-h-[80vh] flex items-center relative overflow-hidden" data-alt="A professional double-exposure image showing a high-tech smartphone displaying colorful social media advertisements overlaid with a crisp, modern urban billboard at dusk. The lighting is dramatic and corporate, featuring deep navy blues and sharp highlights. The overall mood is authoritative and high-performance, emphasizing digital and physical reach.">
+<section class="hero-gradient min-h-[80vh] flex items-center relative overflow-hidden">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid md:grid-cols-2 gap-gutter items-center py-20">
 <div class="text-white space-y-6 reveal">
 <h1 class="font-headline-xl text-headline-xl leading-tight">Your Ads. Our Expertise. <span class="text-secondary-container">Real Results.</span></h1>
 <p class="font-body-lg text-body-lg text-white/80 max-w-lg">We run your campaigns so you don't have to. Data-driven strategy. Measurable ROI.</p>
 <div class="flex flex-wrap gap-4 pt-4">
-<button class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 shadow-lg cta-glow">
-                            Request a Proposal
-                        </button>
-<button class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-white/10 transition-all">
-                            View Case Studies
-                        </button>
+<button class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 shadow-lg cta-glow">Request a Proposal</button>
+<button class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-white/10 transition-all">View Case Studies</button>
 </div>
 </div>
 <div class="hidden md:block relative reveal">
@@ -208,106 +195,39 @@
 </div>
 </div>
 <div class="space-y-4">
-<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-<div class="h-full bg-secondary-container w-[85%]"></div>
-</div>
-<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-<div class="h-full bg-secondary-container w-[70%]"></div>
-</div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-secondary-container w-[85%]"></div></div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden"><div class="h-full bg-secondary-container w-[70%]"></div></div>
 <p class="text-body-md text-white/60">Campaign Performance tracking live.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- How It Works -->
 <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center mb-16 reveal">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Streamlined Process</h2>
 <div class="w-20 h-1.5 bg-secondary-container mx-auto rounded-full"></div>
 </div>
 <div class="grid md:grid-cols-4 gap-gutter">
-<div class="text-center group reveal">
-<div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">chat_bubble</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-2">1. The Brief</h3>
-<p class="text-on-surface-variant">You tell us your goals and what defines success for your brand.</p>
-</div>
-<div class="text-center group reveal">
-<div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">analytics</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-2">2. The Research</h3>
-<p class="text-on-surface-variant">We research your market & data to find untapped opportunities.</p>
-</div>
-<div class="text-center group reveal">
-<div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">ads_click</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-2">3. The Execution</h3>
-<p class="text-on-surface-variant">We build and run your campaign across optimized channels.</p>
-</div>
-<div class="text-center group reveal">
-<div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white">
-<span class="material-symbols-outlined text-3xl">person_add</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-2">4. The Leads</h3>
-<p class="text-on-surface-variant">You get qualified leads delivered straight to your funnel.</p>
-</div>
+<div class="text-center group reveal"><div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white"><span class="material-symbols-outlined text-3xl">chat_bubble</span></div><h3 class="font-headline-md text-headline-md mb-2">1. The Brief</h3><p class="text-on-surface-variant">You tell us your goals and what defines success for your brand.</p></div>
+<div class="text-center group reveal"><div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white"><span class="material-symbols-outlined text-3xl">analytics</span></div><h3 class="font-headline-md text-headline-md mb-2">2. The Research</h3><p class="text-on-surface-variant">We research your market & data to find untapped opportunities.</p></div>
+<div class="text-center group reveal"><div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white"><span class="material-symbols-outlined text-3xl">ads_click</span></div><h3 class="font-headline-md text-headline-md mb-2">3. The Execution</h3><p class="text-on-surface-variant">We build and run your campaign across optimized channels.</p></div>
+<div class="text-center group reveal"><div class="process-icon w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-container group-hover:text-white"><span class="material-symbols-outlined text-3xl">person_add</span></div><h3 class="font-headline-md text-headline-md mb-2">4. The Leads</h3><p class="text-on-surface-variant">You get qualified leads delivered straight to your funnel.</p></div>
 </div>
 </section>
-<!-- What We Offer -->
 <section class="py-20 bg-surface-container-low">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal">
-<div class="max-w-2xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Strategic Advertising Channels</h2>
-<p class="text-body-lg text-on-surface-variant">We focus on high-impact channels that actually move the needle for your business in Nigeria and beyond.</p>
-</div>
-<button class="border-b-2 border-primary text-primary font-label-sm pb-1 hover:text-secondary-container transition-colors">View All Services</button>
+<div class="max-w-2xl"><h2 class="font-headline-lg text-headline-lg text-primary mb-4">Strategic Advertising Channels</h2><p class="text-body-lg text-on-surface-variant">We focus on high-impact channels that actually move the needle for your business in Nigeria and beyond.</p></div>
+<a href="/services" class="border-b-2 border-primary text-primary font-label-sm pb-1 hover:text-secondary-container transition-colors">View All Services</a>
 </div>
 <div class="grid md:grid-cols-3 gap-gutter">
-<!-- Social Ads -->
-<div class="flat-card p-8 rounded-xl flex flex-col h-full">
-<div class="text-secondary-container mb-6">
-<span class="material-symbols-outlined text-4xl">share</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Social Media Ads</h3>
-<p class="text-on-surface-variant mb-6 flex-grow">Full management of Facebook, Instagram, TikTok, and Google Ads tailored for conversion.</p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Hyper-local Targeting</li>
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Creative A/B Testing</li>
-</ul>
-</div>
-<!-- Billboards -->
-<div class="flat-card p-8 rounded-xl flex flex-col h-full border-b-4 border-b-primary">
-<div class="text-secondary-container mb-6">
-<span class="material-symbols-outlined text-4xl">featured_video</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Strategic Billboards</h3>
-<p class="text-on-surface-variant mb-6 flex-grow">Premium placements across Ibadan’s high-traffic locations for maximum brand authority.</p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> High-traffic Ibadan Nodes</li>
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Static & Digital Options</li>
-</ul>
-</div>
-<!-- Integrated -->
-<div class="flat-card p-8 rounded-xl flex flex-col h-full">
-<div class="text-secondary-container mb-6">
-<span class="material-symbols-outlined text-4xl">hub</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Integrated Campaigns</h3>
-<p class="text-on-surface-variant mb-6 flex-grow">The ultimate growth package: Social ads + physical billboards working in perfect sync.</p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Omni-channel Presence</li>
-<li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Unified ROI Reporting</li>
-</ul>
-</div>
+<div class="flat-card p-8 rounded-xl flex flex-col h-full"><div class="text-secondary-container mb-6"><span class="material-symbols-outlined text-4xl">share</span></div><h3 class="font-headline-md text-headline-md mb-4 text-primary">Social Media Ads</h3><p class="text-on-surface-variant mb-6 flex-grow">Full management of Facebook, Instagram, TikTok, and Google Ads tailored for conversion.</p><ul class="space-y-3 mb-8"><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Hyper-local Targeting</li><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Creative A/B Testing</li></ul></div>
+<a href="/map" class="flat-card p-8 rounded-xl flex flex-col h-full border-b-4 border-b-primary"><div class="text-secondary-container mb-6"><span class="material-symbols-outlined text-4xl">featured_video</span></div><h3 class="font-headline-md text-headline-md mb-4 text-primary">Strategic Billboards</h3><p class="text-on-surface-variant mb-6 flex-grow">Premium placements across Ibadan’s high-traffic locations for maximum brand authority.</p><ul class="space-y-3 mb-8"><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> High-traffic Ibadan Nodes</li><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Static & Digital Options</li></ul></a>
+<div class="flat-card p-8 rounded-xl flex flex-col h-full"><div class="text-secondary-container mb-6"><span class="material-symbols-outlined text-4xl">hub</span></div><h3 class="font-headline-md text-headline-md mb-4 text-primary">Integrated Campaigns</h3><p class="text-on-surface-variant mb-6 flex-grow">The ultimate growth package: Social ads + physical billboards working in perfect sync.</p><ul class="space-y-3 mb-8"><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Omni-channel Presence</li><li class="flex items-center gap-2 text-on-surface font-body-md"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Unified ROI Reporting</li></ul></div>
 </div>
 </div>
 </section>
-<!-- Engagement Options -->
 <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
 <div class="bg-primary-container rounded-3xl p-12 relative overflow-hidden reveal">
 <div class="absolute -bottom-10 -right-10 w-96 h-96 bg-secondary-container/10 rounded-full blur-3xl float-orb"></div>
@@ -316,24 +236,8 @@
 <h2 class="font-headline-lg text-headline-lg text-white mb-6">Flexible Engagement Models</h2>
 <p class="text-body-lg text-white/80 mb-8 italic">"After 3 months, if results aren't there, you walk. That's our confidence."</p>
 <div class="space-y-6">
-<div class="flex gap-4">
-<div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">work_history</span>
-</div>
-<div>
-<h4 class="text-white font-bold text-headline-md">Project-Based</h4>
-<p class="text-white/60">Perfect for one-off product launches or seasonal promotions.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">subscriptions</span>
-</div>
-<div>
-<h4 class="text-white font-bold text-headline-md">Subscription-Based</h4>
-<p class="text-white/60">Monthly growth partnership with ongoing optimization and scaling.</p>
-</div>
-</div>
+<div class="flex gap-4"><div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-white">work_history</span></div><div><h4 class="text-white font-bold text-headline-md">Project-Based</h4><p class="text-white/60">Perfect for one-off product launches or seasonal promotions.</p></div></div>
+<div class="flex gap-4"><div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-white">subscriptions</span></div><div><h4 class="text-white font-bold text-headline-md">Subscription-Based</h4><p class="text-white/60">Monthly growth partnership with ongoing optimization and scaling.</p></div></div>
 </div>
 </div>
 <div class="bg-white rounded-2xl p-8 shadow-2xl">
@@ -341,67 +245,42 @@
 <form class="space-y-4">
 <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Your Name" type="text">
 <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Business Email" type="email">
-<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary">
-<option>Select Goal</option>
-<option>Social Media Ads</option>
-<option>Billboard Advertising</option>
-<option>Full Growth Package</option>
-</select>
+<select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"><option>Select Goal</option><option>Social Media Ads</option><option>Billboard Advertising</option><option>Full Growth Package</option></select>
 <button class="w-full bg-secondary-container text-white font-bold py-4 rounded-lg shadow-lg hover:bg-secondary transition-all cta-glow">Submit Request</button>
 </form>
 </div>
 </div>
 </div>
 </section>
-<!-- Why Us -->
 <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid md:grid-cols-2 gap-16 items-center">
 <div class="relative group reveal">
 <div class="absolute -top-4 -left-4 w-full h-full border-2 border-secondary-container rounded-2xl group-hover:top-0 group-hover:left-0 transition-all duration-500"></div>
-<img alt="Emmanuel Multitec Media" class="relative z-10 rounded-2xl w-full h-[500px] object-cover" data-alt="A professional and approachable portrait of a marketing executive, Emmanuel, standing in a bright, modern office with soft daylight. He is wearing a sharp, charcoal grey suit and a confident smile, looking directly at the camera. The background is a clean, minimalist agency office with glass walls and professional lighting. The image conveys trust, expertise, and a results-oriented business focus." src="https://lh3.googleusercontent.com/aida/ADBb0ujq_b7Rro5hDBxKTbdtPjIBs0QAY6b7Hpxl0N8tJGbiD-CAtIeMAlZHA92ZJ827fOATtWIVmeaF3h7RWjaAU6OCqqgP8cMXh2sjVnmeC-56YZ9H_eKYiyLys2fLfcdGWV7HsNvt9mu-jNx2lNP-ZYbdhUXXaVAPz6QK8q9qy-dzABnQwd5mEVTMDLbQPkvG2dmeHIWg7CK7InFnRkyNhx05xfQnkMm-Y7RVi-wCq0n9dkrJ3MxjvlJKSuKMrh7s_i1COsKZUqTk_h8">
-<div class="absolute bottom-8 left-8 z-20 bg-white p-6 rounded-xl shadow-xl">
-<p class="text-primary font-bold text-headline-md">Emmanuel</p>
-<p class="text-on-surface-variant font-label-sm">Managing Director</p>
-</div>
+<img alt="Emmanuel Multitec Media" class="relative z-10 rounded-2xl w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujq_b7Rro5hDBxKTbdtPjIBs0QAY6b7Hpxl0N8tJGbiD-CAtIeMAlZHA92ZJ827fOATtWIVmeaF3h7RWjaAU6OCqqgP8cMXh2sjVnmeC-56YZ9H_eKYiyLys2fLfcdGWV7HsNvt9mu-jNx2lNP-ZYbdhUXXaVAPz6QK8q9qy-dzABnQwd5mEVTMDLbQPkvG2dmeHIWg7CK7InFnRkyNhx05xfQnkMm-Y7RVi-wCq0n9dkrJ3MxjvlJKSuKMrh7s_i1COsKZUqTk_h8">
+<div class="absolute bottom-8 left-8 z-20 bg-white p-6 rounded-xl shadow-xl"><p class="text-primary font-bold text-headline-md">Emmanuel</p><p class="text-on-surface-variant font-label-sm">Managing Director</p></div>
 </div>
 <div class="reveal">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Why Brands Choose Multitec Media</h2>
 <p class="text-body-lg text-on-surface-variant mb-8">We aren't just an agency; we are your ROI partners. With a deep footprint in the Ibadan market, we blend local intelligence with global digital strategies.</p>
 <div class="grid grid-cols-2 gap-8">
-<div>
-<p class="text-headline-xl font-bold text-primary mb-1">6+</p>
-<p class="text-on-surface-variant">Years Experience</p>
-</div>
-<div>
-<p class="text-headline-xl font-bold text-primary mb-1">500+</p>
-<p class="text-on-surface-variant">Successful Campaigns</p>
-</div>
+<div><p class="text-headline-xl font-bold text-primary mb-1">6+</p><p class="text-on-surface-variant">Years Experience</p></div>
+<div><p class="text-headline-xl font-bold text-primary mb-1">500+</p><p class="text-on-surface-variant">Successful Campaigns</p></div>
 <div class="col-span-2 space-y-4 pt-4">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">verified</span>
-<p class="text-on-surface font-bold">Deep Local Ibadan Market Knowledge</p>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-secondary-container">query_stats</span>
-<p class="text-on-surface font-bold">Rigorous Data-Driven Strategy</p>
-</div>
+<div class="flex items-center gap-4"><span class="material-symbols-outlined text-secondary-container">verified</span><p class="text-on-surface font-bold">Deep Local Ibadan Market Knowledge</p></div>
+<div class="flex items-center gap-4"><span class="material-symbols-outlined text-secondary-container">query_stats</span><p class="text-on-surface font-bold">Rigorous Data-Driven Strategy</p></div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Bottom CTA -->
 <section class="py-24 bg-primary text-white text-center">
 <div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto space-y-8 reveal">
 <h2 class="font-headline-xl text-headline-xl">Ready to get qualified leads?</h2>
 <p class="text-body-lg text-white/70">Stop guessing and start growing. Our team is ready to build your customized growth blueprint.</p>
-<button class="bg-white text-primary px-10 py-5 rounded-lg font-headline-md hover:bg-secondary-fixed transition-all shadow-xl active:scale-95 cta-glow">
-                    Request a Proposal
-                </button>
+<button class="bg-white text-primary px-10 py-5 rounded-lg font-headline-md hover:bg-secondary-fixed transition-all shadow-xl active:scale-95 cta-glow">Request a Proposal</button>
 </div>
 </section>
 </main>
-<!-- Footer -->
 <footer class="bg-primary-container border-t border-primary w-full">
 <div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-container-max mx-auto">
 <div class="space-y-6 max-w-sm">
@@ -412,52 +291,21 @@
 <p class="font-body-md text-body-md text-on-primary-container opacity-80">© 2024 Multitec Media. Your ROI, Our Promise.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-<div class="space-y-4">
-<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Company</h4>
-<ul class="space-y-2">
-<li class=""><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#">Services</a></li>
-<li class=""><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#">About</a></li>
-<li class=""><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="#">Contact</a></li>
-</ul>
-</div>
-<div class="space-y-4">
-<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Contact</h4>
-<ul class="space-y-2">
-<li class="text-on-primary-container opacity-80 font-body-md text-body-md">Emmanuel | 09034348640</li>
-<li class="text-on-primary-container opacity-80 font-body-md text-body-md">multitecmedia@gmail.com</li>
-</ul>
-</div>
-<div class="space-y-4">
-<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Follow Us</h4>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined">social_leaderboard</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined">photo_camera</span>
-</a>
-</div>
-</div>
+<div class="space-y-4"><h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Company</h4><ul class="space-y-2"><li><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="/services">Services</a></li><li><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="/about">About</a></li><li><a class="text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md" href="/proposal">Contact</a></li></ul></div>
+<div class="space-y-4"><h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Contact</h4><ul class="space-y-2"><li class="text-on-primary-container opacity-80 font-body-md text-body-md">Emmanuel | 09034348640</li><li class="text-on-primary-container opacity-80 font-body-md text-body-md">multitecmedia@gmail.com</li></ul></div>
+<div class="space-y-4"><h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Follow Us</h4><div class="flex gap-4"><a class="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a><a class="w-10 h-10 rounded-full border border-on-primary-container/20 flex items-center justify-center text-on-primary-container hover:bg-secondary-container hover:text-white transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span></a></div></div>
 </div>
 </div>
 </footer>
 <script>
-        // Soft scroll-reveal (float-in) for sections and cards
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
         document.querySelectorAll('.reveal, .flat-card').forEach(el => {
             if (!el.classList.contains('reveal')) el.classList.add('reveal');
             observer.observe(el);
         });
     </script>
-
-
-
-
 </body></html>
