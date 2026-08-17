@@ -151,11 +151,20 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 320px;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full">
-<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<nav class="w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex justify-between items-center">
 <a href="/" class="flex items-center gap-3 hover:opacity-90">
 <img alt="Multitec Media Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
 <span class="text-headline-md font-headline-md font-bold text-primary">Multitec Media</span>
@@ -166,7 +175,18 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
 <a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Contact</a>
 </div>
-<button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
+<button type="button" id="menu-btn" class="md:hidden text-primary p-2" aria-label="Open menu">
+<span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="md:hidden">
+<div class="flex flex-col gap-1 pt-4 pb-2 border-t border-outline-variant mt-4">
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/services">Services</a>
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/map">Billboard Network</a>
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/about">About</a>
+<a class="font-body-md text-body-md text-white bg-primary-container py-3 px-4 rounded-lg text-center mt-2" href="/proposal">Contact</a>
+</div>
+</div>
 </nav>
 </header>
 <main>
@@ -296,6 +316,15 @@
 </div>
 </footer>
 <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                menuIcon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
+            });
+        }
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
