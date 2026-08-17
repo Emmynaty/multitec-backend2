@@ -54,8 +54,9 @@ app.get('/map', (req, res) => {
   res.sendFile(path.join(__dirname, 'multitec_media_updated_billboard_map', 'code.html'));
 });
 
+// Gallery content is now part of Billboard Network — redirect old links
 app.get('/gallery', (req, res) => {
-  res.sendFile(path.join(__dirname, 'multitec_media_updated_billboard_gallery', 'code.html'));
+  res.redirect(301, '/map');
 });
 
 app.get('/promise', (req, res) => {
