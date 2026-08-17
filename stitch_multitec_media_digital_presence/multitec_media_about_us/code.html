@@ -6,14 +6,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
         .hero-gradient {
             background: radial-gradient(circle at top right, rgba(172, 201, 240, 0.15), transparent 40%),
                         radial-gradient(circle at bottom left, rgba(253, 88, 60, 0.05), transparent 40%);
@@ -25,75 +19,27 @@
           theme: {
             extend: {
               "colors": {
-                      "inverse-surface": "#313030",
-                      "primary-fixed": "#d2e4ff",
-                      "secondary": "#b6250f",
-                      "on-surface": "#1c1b1b",
-                      "on-tertiary-fixed": "#191c1e",
-                      "surface-container": "#f0eded",
-                      "surface-container-highest": "#e5e2e1",
-                      "surface-bright": "#fcf9f8",
-                      "inverse-on-surface": "#f3f0ef",
-                      "on-secondary": "#ffffff",
-                      "secondary-fixed": "#ffdad3",
-                      "on-background": "#1c1b1b",
-                      "tertiary": "#14181a",
-                      "secondary-fixed-dim": "#ffb4a6",
-                      "error-container": "#ffdad6",
-                      "on-primary-container": "#7995bb",
-                      "on-secondary-fixed-variant": "#8f1000",
-                      "surface-dim": "#dcd9d9",
-                      "surface-tint": "#446083",
-                      "surface-variant": "#e5e2e1",
-                      "secondary-container": "#fd583c",
-                      "outline": "#73777f",
-                      "surface-container-high": "#eae7e7",
-                      "tertiary-container": "#292c2f",
-                      "primary-container": "#0b2d4d",
-                      "primary-fixed-dim": "#acc9f0",
-                      "surface-container-lowest": "#ffffff",
-                      "on-primary-fixed": "#001c37",
-                      "on-primary-fixed-variant": "#2b486a",
-                      "on-primary": "#ffffff",
-                      "surface-container-low": "#f6f3f2",
-                      "surface": "#fcf9f8",
-                      "tertiary-fixed": "#e0e3e6",
-                      "on-tertiary-container": "#909396",
-                      "on-secondary-fixed": "#3f0300",
-                      "error": "#ba1a1a",
-                      "inverse-primary": "#acc9f0",
-                      "on-surface-variant": "#43474e",
-                      "on-error-container": "#93000a",
-                      "on-secondary-container": "#590600",
-                      "on-tertiary": "#ffffff",
-                      "on-tertiary-fixed-variant": "#44474a",
-                      "background": "#fcf9f8",
-                      "primary": "#001830",
-                      "on-error": "#ffffff",
-                      "tertiary-fixed-dim": "#c4c7ca",
-                      "outline-variant": "#c3c6cf"
+                      "inverse-surface": "#313030", "primary-fixed": "#d2e4ff", "secondary": "#b6250f", "on-surface": "#1c1b1b",
+                      "on-tertiary-fixed": "#191c1e", "surface-container": "#f0eded", "surface-container-highest": "#e5e2e1",
+                      "surface-bright": "#fcf9f8", "inverse-on-surface": "#f3f0ef", "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdad3", "on-background": "#1c1b1b", "tertiary": "#14181a",
+                      "secondary-fixed-dim": "#ffb4a6", "error-container": "#ffdad6", "on-primary-container": "#7995bb",
+                      "on-secondary-fixed-variant": "#8f1000", "surface-dim": "#dcd9d9", "surface-tint": "#446083",
+                      "surface-variant": "#e5e2e1", "secondary-container": "#fd583c", "outline": "#73777f",
+                      "surface-container-high": "#eae7e7", "tertiary-container": "#292c2f", "primary-container": "#0b2d4d",
+                      "primary-fixed-dim": "#acc9f0", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001c37",
+                      "on-primary-fixed-variant": "#2b486a", "on-primary": "#ffffff", "surface-container-low": "#f6f3f2",
+                      "surface": "#fcf9f8", "tertiary-fixed": "#e0e3e6", "on-tertiary-container": "#909396",
+                      "on-secondary-fixed": "#3f0300", "error": "#ba1a1a", "inverse-primary": "#acc9f0",
+                      "on-surface-variant": "#43474e", "on-error-container": "#93000a", "on-secondary-container": "#590600",
+                      "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#44474a", "background": "#fcf9f8",
+                      "primary": "#001830", "on-error": "#ffffff", "tertiary-fixed-dim": "#c4c7ca", "outline-variant": "#c3c6cf"
               },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "container-max": "1280px",
-                      "unit": "8px",
-                      "margin-mobile": "16px",
-                      "margin-desktop": "80px",
-                      "gutter": "24px"
-              },
+              "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+              "spacing": { "container-max": "1280px", "unit": "8px", "margin-mobile": "16px", "margin-desktop": "80px", "gutter": "24px" },
               "fontFamily": {
-                      "headline-md": ["Montserrat"],
-                      "headline-lg": ["Montserrat"],
-                      "label-sm": ["Inter"],
-                      "body-lg": ["Inter"],
-                      "headline-lg-mobile": ["Montserrat"],
-                      "body-md": ["Inter"],
-                      "headline-xl": ["Montserrat"]
+                      "headline-md": ["Montserrat"], "headline-lg": ["Montserrat"], "label-sm": ["Inter"],
+                      "body-lg": ["Inter"], "headline-lg-mobile": ["Montserrat"], "body-md": ["Inter"], "headline-xl": ["Montserrat"]
               },
               "fontSize": {
                       "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
@@ -120,8 +66,7 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/services">Services</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/map">Billboard Network</a>
 <a class="font-body-md text-body-md text-secondary-container border-b-2 border-secondary-container pb-1" href="/about">About</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/proposal">Contact</a>
-<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Request a Proposal</a>
+<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Contact</a>
 </div>
 <button class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
 </nav>
@@ -180,7 +125,7 @@
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Ready to pivot to performance?</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Stop throwing budget at the wall. Let's build a predictable revenue engine for your business together.</p>
 </div>
-<div class="mt-8"><a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="/proposal"><span>Get a Free Performance Audit</span><span class="material-symbols-outlined">arrow_forward</span></a></div>
+<div class="mt-8"><a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="/proposal"><span>Contact Us</span><span class="material-symbols-outlined">arrow_forward</span></a></div>
 </div>
 </div>
 </div>
