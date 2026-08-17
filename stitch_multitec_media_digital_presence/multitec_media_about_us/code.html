@@ -5,7 +5,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -20,7 +19,6 @@
                         radial-gradient(circle at bottom left, rgba(253, 88, 60, 0.05), transparent 40%);
         }
     </style>
-<!-- Shared Components Tailwind Config -->
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -112,7 +110,6 @@
       </script>
 </head>
 <body class="bg-background text-on-surface selection:bg-secondary-container selection:text-white">
-<!-- TopNavBar -->
 <header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full">
 <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <a href="/" class="flex items-center gap-3 hover:opacity-90">
@@ -122,35 +119,22 @@
 <div class="hidden md:flex items-center gap-8">
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/services">Services</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/map">Billboard Network</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/gallery">Gallery</a>
 <a class="font-body-md text-body-md text-secondary-container border-b-2 border-secondary-container pb-1" href="/about">About</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/proposal">Contact</a>
-<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">
-                    Request a Proposal
-</a>
+<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Request a Proposal</a>
 </div>
-<!-- Mobile Menu Toggle (Simplified) -->
-<button class="md:hidden p-2 text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<button class="md:hidden p-2 text-primary"><span class="material-symbols-outlined">menu</span></button>
 </nav>
 </header>
 <main class="hero-gradient">
-<!-- Hero Section -->
-<section class="px-margin-mobile md:px-margin-desktop py-20 md:py-32 max-w-container-max mx-auto transition-all duration-700 opacity-100 translate-y-0">
+<section class="px-margin-mobile md:px-margin-desktop py-20 md:py-32 max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="order-2 lg:order-1">
 <span class="inline-block px-4 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full font-label-sm text-label-sm mb-6 uppercase tracking-widest">Our Story</span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">
-                        Built from the inside out to drive <span class="text-secondary-container">real growth.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
-                        After 6+ years running ads inside agencies, I saw a gap... I built Multitec Media to be different—lean, data-driven, results-focused.
-                    </p>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight">Built from the inside out to drive <span class="text-secondary-container">real growth.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">After 6+ years running ads inside agencies, I saw a gap... I built Multitec Media to be different—lean, data-driven, results-focused.</p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-white px-8 py-4 rounded-lg font-label-sm text-label-sm shadow-lg shadow-primary/10 hover:-translate-y-1 transition-all">
-                            Partner With Us
-                        </button>
+<a href="/proposal" class="bg-primary text-white px-8 py-4 rounded-lg font-label-sm text-label-sm shadow-lg shadow-primary/10 hover:-translate-y-1 transition-all">Partner With Us</a>
 <div class="flex items-center gap-2 px-6 py-4">
 <span class="material-symbols-outlined text-secondary-container" data-weight="fill">verified</span>
 <span class="font-label-sm text-label-sm text-primary">ROI-Guaranteed Process</span>
@@ -160,7 +144,7 @@
 <div class="order-1 lg:order-2 relative group">
 <div class="absolute -inset-4 bg-secondary-container/10 rounded-3xl blur-2xl group-hover:bg-secondary-container/20 transition-all duration-700"></div>
 <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-outline-variant overflow-hidden">
-<img alt="Emmanuel - Founder of Multitec Media" class="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A professional and approachable portrait of Emmanuel, the founder of Multitec Media. He is wearing a clean, modern navy blue blazer over a crisp white shirt, looking directly at the camera with a confident, friendly smile. The background is a blurred high-end corporate office setting with soft natural light streaming in from large windows. The overall aesthetic is clean, corporate-modern, and trustworthy, with a focus on professional clarity." src="https://lh3.googleusercontent.com/aida/ADBb0ujq_b7Rro5hDBxKTbdtPjIBs0QAY6b7Hpxl0N8tJGbiD-CAtIeMAlZHA92ZJ827fOATtWIVmeaF3h7RWjaAU6OCqqgP8cMXh2sjVnmeC-56YZ9H_eKYiyLys2fLfcdGWV7HsNvt9mu-jNx2lNP-ZYbdhUXXaVAPz6QK8q9qy-dzABnQwd5mEVTMDLbQPkvG2dmeHIWg7CK7InFnRkyNhx05xfQnkMm-Y7RVi-wCq0n9dkrJ3MxjvlJKSuKMrh7s_i1COsKZUqTk_h8">
+<img alt="Emmanuel - Founder of Multitec Media" class="w-full h-auto rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0ujq_b7Rro5hDBxKTbdtPjIBs0QAY6b7Hpxl0N8tJGbiD-CAtIeMAlZHA92ZJ827fOATtWIVmeaF3h7RWjaAU6OCqqgP8cMXh2sjVnmeC-56YZ9H_eKYiyLys2fLfcdGWV7HsNvt9mu-jNx2lNP-ZYbdhUXXaVAPz6QK8q9qy-dzABnQwd5mEVTMDLbQPkvG2dmeHIWg7CK7InFnRkyNhx05xfQnkMm-Y7RVi-wCq0n9dkrJ3MxjvlJKSuKMrh7s_i1COsKZUqTk_h8">
 <div class="absolute bottom-10 left-10 right-10 bg-primary/90 backdrop-blur-md p-6 rounded-xl border border-white/20">
 <h3 class="font-headline-md text-headline-md text-white mb-1">Emmanuel</h3>
 <p class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider">Founder & Lead Strategist</p>
@@ -169,54 +153,39 @@
 </div>
 </div>
 </section>
-<!-- Philosophy Bento Grid -->
-<section class="bg-white py-24 border-y border-outline-variant transition-all duration-700 opacity-100 translate-y-0">
+<section class="bg-white py-24 border-y border-outline-variant">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-16 text-center max-w-3xl mx-auto">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Philosophy</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">We don't believe in vanity metrics. We believe in performance that pays for itself.</p>
 </div>
 <div class="bento-grid">
-<!-- Card 1: Data First -->
-<div class="col-span-12 md:col-span-7 bg-surface-container-low p-10 rounded-3xl border border-outline-variant group hover:border-secondary-container transition-all duration-700 opacity-100 translate-y-0">
-<div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl">insights</span>
-</div>
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-10 rounded-3xl border border-outline-variant group hover:border-secondary-container transition-all">
+<div class="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl">insights</span></div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Data-First DNA</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Every campaign we launch is rooted in rigorous data analysis. We don't guess; we calculate. By tracking every dollar from click to conversion, we eliminate waste and maximize your spend's efficiency.</p>
 </div>
-<!-- Card 2: No BS -->
-<div class="col-span-12 md:col-span-5 bg-primary-container p-10 rounded-3xl group hover:bg-primary transition-colors transition-all duration-700 opacity-100 translate-y-0">
-<div class="w-14 h-14 bg-secondary-container rounded-xl flex items-center justify-center mb-6 text-white">
-<span class="material-symbols-outlined text-3xl">emergency_home</span>
-</div>
+<div class="col-span-12 md:col-span-5 bg-primary-container p-10 rounded-3xl group hover:bg-primary transition-colors">
+<div class="w-14 h-14 bg-secondary-container rounded-xl flex items-center justify-center mb-6 text-white"><span class="material-symbols-outlined text-3xl">emergency_home</span></div>
 <h3 class="font-headline-md text-headline-md text-white mb-4">No BS approach</h3>
 <p class="font-body-md text-body-md text-on-primary-container">We value transparency above all else. If a strategy isn't working, we'll tell you. Our reports are straightforward, honest, and focused on what actually matters to your bottom line.</p>
 </div>
-<!-- Card 3: Success Metric -->
-<div class="col-span-12 md:col-span-5 bg-secondary-container p-10 rounded-3xl text-white transition-all duration-700 opacity-100 translate-y-0">
+<div class="col-span-12 md:col-span-5 bg-secondary-container p-10 rounded-3xl text-white">
 <h3 class="font-headline-xl text-headline-xl mb-6">ROI</h3>
 <p class="font-label-sm text-label-sm uppercase tracking-widest opacity-80 mb-2">Our Only Metric</p>
 <p class="font-body-md text-body-md">Your Return on Investment is the only success metric that counts. If you're not growing, we're not finished.</p>
 </div>
-<!-- Card 4: Action -->
-<div class="col-span-12 md:col-span-7 bg-surface-bright border border-outline-variant p-10 rounded-3xl flex flex-col justify-between transition-all duration-700 opacity-100 translate-y-0">
+<div class="col-span-12 md:col-span-7 bg-surface-bright border border-outline-variant p-10 rounded-3xl flex flex-col justify-between">
 <div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4">Ready to pivot to performance?</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Stop throwing budget at the wall. Let's build a predictable revenue engine for your business together.</p>
 </div>
-<div class="mt-8">
-<a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#">
-<span class="">Get a Free Performance Audit</span>
-<span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
+<div class="mt-8"><a class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="/proposal"><span>Get a Free Performance Audit</span><span class="material-symbols-outlined">arrow_forward</span></a></div>
 </div>
 </div>
 </div>
 </section>
-<!-- Contact Strip -->
-<section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto transition-all duration-700 opacity-100 translate-y-0">
+<section class="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
 <div class="flex flex-col md:flex-row items-center justify-between gap-10 bg-white border border-outline-variant p-12 rounded-[2rem] shadow-sm">
 <div>
 <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Get in touch directly</h2>
@@ -224,28 +193,17 @@
 </div>
 <div class="flex flex-col sm:flex-row gap-6 w-full md:w-auto">
 <a class="flex items-center gap-4 p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors group" href="tel:09034348640">
-<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">call</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Emmanuel</p>
-<p class="font-body-md text-body-md font-bold text-primary">09034348640</p>
-</div>
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">call</span></div>
+<div><p class="font-label-sm text-label-sm text-on-surface-variant">Emmanuel</p><p class="font-body-md text-body-md font-bold text-primary">09034348640</p></div>
 </a>
 <a class="flex items-center gap-4 p-4 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors group" href="mailto:multitecmedia@gmail.com">
-<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Email Us</p>
-<p class="font-body-md text-body-md font-bold text-primary">multitecmedia@gmail.com</p>
-</div>
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">mail</span></div>
+<div><p class="font-label-sm text-label-sm text-on-surface-variant">Email Us</p><p class="font-body-md text-body-md font-bold text-primary">multitecmedia@gmail.com</p></div>
 </a>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
 <footer class="bg-primary-container border-t border-primary">
 <div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-container-max mx-auto">
 <div class="max-w-sm">
@@ -253,16 +211,14 @@
 <img alt="Multitec Media Logo" class="h-8 w-8 brightness-0 invert opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
 <span class="text-headline-md font-headline-md font-bold text-on-primary-container">Multitec Media</span>
 </div>
-<p class="font-body-md text-body-md text-on-primary-container opacity-80 mb-8">
-                    © 2024 Multitec Media. Your ROI, Our Promise.
-                </p>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 mb-8">© 2024 Multitec Media. Your ROI, Our Promise.</p>
 </div>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
 <div class="flex flex-col gap-4">
 <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Navigation</span>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Services</a>
-<a class="font-body-md text-body-md text-secondary-fixed font-bold" href="#">About</a>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="/services">Services</a>
+<a class="font-body-md text-body-md text-secondary-fixed font-bold" href="/about">About</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="/proposal">Contact</a>
 </div>
 <div class="flex flex-col gap-4">
 <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Legal</span>
@@ -277,31 +233,4 @@
 </div>
 </div>
 </footer>
-<script>
-        // Micro-interactions
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-10');
-                    }
-                });
-            }, observerOptions);
-
-            // Apply fade-in animation to bento cards and sections
-            document.querySelectorAll('.bento-grid > div, section').forEach(el => {
-                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-                observer.observe(el);
-            });
-        });
-    </script>
-
-
-
-
 </body></html>
