@@ -50,11 +50,12 @@ app.get('/proposal', (req, res) => {
   res.sendFile(path.join(__dirname, 'multitec_media_request_a_proposal', 'code.html'));
 });
 
+// Billboard Network = full inventory (former Gallery content)
 app.get('/map', (req, res) => {
-  res.sendFile(path.join(__dirname, 'multitec_media_updated_billboard_map', 'code.html'));
+  res.sendFile(path.join(__dirname, 'multitec_media_updated_billboard_gallery', 'code.html'));
 });
 
-// Gallery content is now part of Billboard Network — redirect old links
+// Old Gallery URL redirects here
 app.get('/gallery', (req, res) => {
   res.redirect(301, '/map');
 });
