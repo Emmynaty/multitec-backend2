@@ -5,7 +5,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -165,8 +164,7 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/services">Services</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/map">Billboard Network</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/proposal">Contact</a>
-<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Request a Proposal</a>
+<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Contact</a>
 </div>
 <button class="md:hidden text-primary"><span class="material-symbols-outlined">menu</span></button>
 </nav>
@@ -178,8 +176,8 @@
 <h1 class="font-headline-xl text-headline-xl leading-tight">Your Ads. Our Expertise. <span class="text-secondary-container">Real Results.</span></h1>
 <p class="font-body-lg text-body-lg text-white/80 max-w-lg">We run your campaigns so you don't have to. Data-driven strategy. Measurable ROI.</p>
 <div class="flex flex-wrap gap-4 pt-4">
-<button class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 shadow-lg cta-glow">Request a Proposal</button>
-<button class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-white/10 transition-all">View Case Studies</button>
+<a href="/proposal" class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all active:scale-95 shadow-lg cta-glow inline-block">Contact Us</a>
+<a href="/services" class="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-white/10 transition-all inline-block">View Services</a>
 </div>
 </div>
 <div class="hidden md:block relative reveal">
@@ -242,11 +240,11 @@
 </div>
 <div class="bg-white rounded-2xl p-8 shadow-2xl">
 <h3 class="text-primary font-headline-md mb-4 text-center">Ready to Start?</h3>
-<form class="space-y-4">
+<form class="space-y-4" action="/proposal">
 <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Your Name" type="text">
 <input class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary" placeholder="Business Email" type="email">
 <select class="w-full border-outline-variant rounded-lg p-3 focus:ring-primary focus:border-primary"><option>Select Goal</option><option>Social Media Ads</option><option>Billboard Advertising</option><option>Full Growth Package</option></select>
-<button class="w-full bg-secondary-container text-white font-bold py-4 rounded-lg shadow-lg hover:bg-secondary transition-all cta-glow">Submit Request</button>
+<a href="/proposal" class="block w-full text-center bg-secondary-container text-white font-bold py-4 rounded-lg shadow-lg hover:bg-secondary transition-all cta-glow">Contact Us</a>
 </form>
 </div>
 </div>
@@ -277,7 +275,7 @@
 <div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto space-y-8 reveal">
 <h2 class="font-headline-xl text-headline-xl">Ready to get qualified leads?</h2>
 <p class="text-body-lg text-white/70">Stop guessing and start growing. Our team is ready to build your customized growth blueprint.</p>
-<button class="bg-white text-primary px-10 py-5 rounded-lg font-headline-md hover:bg-secondary-fixed transition-all shadow-xl active:scale-95 cta-glow">Request a Proposal</button>
+<a href="/proposal" class="inline-block bg-white text-primary px-10 py-5 rounded-lg font-headline-md hover:bg-secondary-fixed transition-all shadow-xl active:scale-95 cta-glow">Contact Us</a>
 </div>
 </section>
 </main>
