@@ -4,8 +4,8 @@
 <title>Services | Multitec Media - High ROI Marketing</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -19,6 +19,14 @@
         .map-container::-webkit-scrollbar-thumb {
             background: #D1D5DB;
             border-radius: 10px;
+        }
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        #mobile-menu.open {
+            max-height: 320px;
         }
     </style>
 <script id="tailwind-config">
@@ -114,24 +122,30 @@
 <body class="bg-background text-on-surface font-body-md">
 <!-- Top Navigation Bar -->
 <header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full">
-<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<a href="/" class="flex items-center gap-4 hover:opacity-90">
+<nav class="w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex justify-between items-center">
+<a href="/" class="flex items-center gap-3 hover:opacity-90">
 <img alt="Multitec Media Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
 <span class="text-headline-md font-headline-md font-bold text-primary">Multitec Media</span>
 </a>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-secondary-container border-b-2 border-secondary-container pb-1 font-body-md text-body-md" href="/services">Services</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/map">Billboard Network</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/gallery">Gallery</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="/about">About</a>
-<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">
-                    Request a Proposal
-</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
+<a href="/proposal" class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:opacity-90 transition-all active:scale-95 text-center">Contact</a>
 </div>
-<!-- Mobile Menu Trigger -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
+<button type="button" id="menu-btn" class="md:hidden text-primary p-2" aria-label="Open menu">
+<span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
 </button>
+</div>
+<div id="mobile-menu" class="md:hidden">
+<div class="flex flex-col gap-1 pt-4 pb-2 border-t border-outline-variant mt-4">
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/services">Services</a>
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/map">Billboard Network</a>
+<a class="font-body-md text-body-md text-on-surface py-3 px-2 hover:bg-surface-container rounded-lg" href="/about">About</a>
+<a class="font-body-md text-body-md text-white bg-primary-container py-3 px-4 rounded-lg text-center mt-2" href="/proposal">Contact</a>
+</div>
+</div>
 </nav>
 </header>
 <main>
@@ -302,98 +316,54 @@
 </div>
 </div>
 <div class="order-1 lg:order-2">
-<h2 class="font-headline-lg text-headline-lg mb-6">The Power of Integrated Synergy</h2>
-<p class="font-body-lg text-body-lg opacity-90 mb-8 leading-relaxed">
-                            A lead seen on a smartphone is 3x more likely to convert if they have previously passed your billboard on their way to work. We bridge the gap between "Digital Clicks" and "Physical Presence."
-                        </p>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="w-12 h-12 flex-shrink-0 bg-secondary-container rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined">hub</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm">Unified Narrative</p>
-<p class="text-sm opacity-70">Single-message consistency across Facebook, Instagram, and physical road Gantries.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-12 h-12 flex-shrink-0 bg-secondary-container rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined">monitoring</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm">Multi-Touch Attribution</p>
-<p class="text-sm opacity-70">Tracking how physical location visibility boosts digital search intent.</p>
-</div>
-</div>
+<h2 class="font-headline-lg text-headline-lg mb-6">One Message. Every Surface.</h2>
+<p class="text-body-lg text-white/80 mb-8">
+                        When your social ads and your billboards tell the same story, recall multiplies. We orchestrate both so your brand becomes impossible to ignore.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a href="/proposal" class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-sm hover:bg-secondary transition-all">Start an Integrated Campaign</a>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Final CTA Section -->
-<section class="py-24 bg-white border-t border-outline-variant text-center">
-<div class="max-w-3xl mx-auto px-margin-mobile">
-<h2 class="font-headline-xl text-headline-xl text-primary mb-6">Ready to scale your ROI?</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
-                    Join the league of growing brands in Ibadan and beyond. Our strategy sessions are free, focused, and data-backed.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-primary text-white px-10 py-4 rounded-lg font-label-sm text-label-sm hover:scale-105 transition-transform">
-                        Get Your Custom Strategy
-                    </button>
-<button class="border-2 border-primary text-primary px-10 py-4 rounded-lg font-label-sm text-label-sm hover:bg-surface-container transition-colors">
-                        View Case Studies
-                    </button>
-</div>
-</div>
+<!-- CTA -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Ready to Scale?</h2>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Tell us about your brand and we'll map out the highest-ROI path forward.</p>
+<a href="/proposal" class="bg-secondary-container text-white px-10 py-4 rounded-lg font-label-sm text-label-sm hover:bg-secondary transition-all shadow-lg inline-block">Request a Proposal</a>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-primary-container dark:bg-inverse-surface border-t border-primary">
-<div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-container-max mx-auto">
-<div class="max-w-xs">
-<div class="flex items-center gap-3 mb-4">
-<img alt="Multitec Media Logo" class="h-8 w-8 brightness-0 invert opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
-<span class="text-headline-md font-headline-md font-bold text-on-primary-container dark:text-primary-fixed">Multitec Media</span>
+<footer class="bg-primary-container text-white py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<img alt="Multitec Media Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCtKXDyEabzslM9iZLBlRL4JKqzOYD5tB2BMCg301IRDC94b1Sshzp4VTx0bn57Z8Xqms9Em8-7vvlSe0d44NS4opcwyVmwLIovsZqE6O87V7aB9zbgMckG4xaN0-Zxd_Palo6Uveo3jLd6CMfjiz0rd1TYvdAo-BEfTh6DhtQSDkJIQOqDap9STI26Fp0DhCw2-DgDpPgFaU6J2jLqeM8GU-aRgaM8SrKrQjTe4kwL1EMUz_AcrSb3AjovBwkvbxgTK0kuM9TLU4">
+<span class="font-headline-md font-bold">Multitec Media</span>
 </div>
-<p class="font-body-md text-body-md text-on-primary-container opacity-80">
-                    Driving growth through precise digital targeting and high-impact outdoor placement.
-                </p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-<div class="flex flex-col gap-4">
-<span class="font-label-sm text-label-sm text-on-primary-container font-bold">Services</span>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Social Ads</a>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Billboards</a>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Campaigns</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="font-label-sm text-label-sm text-on-primary-container font-bold">Connect</span>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="tel:09034348640">09034348640</a>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity text-xs break-all" href="mailto:multitecmedia@gmail.com">multitecmedia@gmail.com</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="font-label-sm text-label-sm text-on-primary-container font-bold">Company</span>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">About</a>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
-</div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 border-t border-white/10">
-<p class="font-label-sm text-label-sm text-on-primary-container opacity-60">
+<p class="font-label-sm text-on-primary-container opacity-60">
                 © 2024 Multitec Media. Your ROI, Our Promise.
             </p>
 </div>
 </footer>
 <script>
-        // Simple micro-interaction for map pins
-        document.querySelectorAll('.group').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                // In a real app, this would update the map focus
-                console.log('Highlighting location...');
+        const menuBtn = document.getElementById('menu-btn);
+        const mobileMenu = document.getElementById('mobile-menu);
+        const menuIcon = document.getElementById('menu-icon);
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open);
+                menuIcon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
             });
+        }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible);
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal, .flat-card').forEach(el => {
+            if (!el.classList.contains('reveal')) el.classList.add('reveal);
+            observer.observe(el);
         });
     </script>
-
 
 </body></html>
