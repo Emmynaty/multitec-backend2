@@ -4,7 +4,7 @@
 <title>Services | Multitec Media - High ROI Marketing</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outline:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outreined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
 .material-symbols-outlined {
 font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -327,7 +327,7 @@ View All Locations <span class="material-symbols-outlined">map</span>
 </div>
 <div class="flex flex-col gap-4">
 <span class="font-label-sm text-label-sm text-on-primary-container font-bold">Connect</span>
-<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="tel:08033438840">08033438840</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="08033438840">08033438840</a>
 <a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:opacity-100 transition-opacity" href="mailto:multitecmedia@gmail.com">multitecmedia@gmail.com</a>
 </div>
 <div class="flex flex-col gap-4">
@@ -342,8 +342,10 @@ View All Locations <span class="material-symbols-outlined">map</span>
 </div>
 </footer>
 <script>
+        // Simple micro-interaction for map pins
         document.querySelectorAll('.group').forEach(item => {
             item.addEventListener('mouseenter', () => {
+                // In a real app, this would update the map focus
                 console.log('Highlighting location...');
             });
         });
